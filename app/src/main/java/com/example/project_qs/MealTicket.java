@@ -36,6 +36,9 @@ public class MealTicket {
         return "QRCode123";  // Substitua com uma implementação real
     }
 
+    public void setMealOrder(MealOrder updatedOrder) {
+    }
+
     // Adicione métodos adicionais conforme necessário
 }
 

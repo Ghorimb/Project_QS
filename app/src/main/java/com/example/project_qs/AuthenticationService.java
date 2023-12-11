@@ -10,21 +10,21 @@ public class AuthenticationService {
         this.registeredUsers = new HashMap<>();
     }
 
-    public void registerUser(String username, String password, String name, String identificationNumber, UserType userType) {
-        // Lógica para registrar um novo usuário
-        User newUser = new User(name, identificationNumber, userType, username, password);
+    public void registerUser(String username, String password, String name, String identificationNumber, User user) {
+        User newUser = new User(name, identificationNumber, user, username, password);
         registeredUsers.put(username, newUser);
     }
 
     public User loginUser(String username, String password) {
-        // Lógica para autenticar o usuário
         User user = registeredUsers.get(username);
         if (user != null && user.getPassword().equals(password)) {
             return user;
         }
-        return null;  // Retornar null se a autenticação falhar
+        return null;
     }
 
-    // Adicione métodos adicionais conforme necessário
+    // Outros métodos conforme necessário
+
 }
+
 

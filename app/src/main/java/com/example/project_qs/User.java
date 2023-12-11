@@ -3,35 +3,23 @@ public class User {
 
     private String name;
     private String identificationNumber;
-    private UserType userType;  // Enum para representar o tipo de usuário
+    private User user;  // Agora usa a enumeração
     private String username;
     private String password;
 
-    public User(String name, String identificationNumber, UserType userType, String username, String password) {
+    public User(String name, String identificationNumber, User user, String username, String password) {
         this.name = name;
         this.identificationNumber = identificationNumber;
-        this.userType = userType;
+        this.user = user;
         this.username = username;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getPassword() {
+        return password;
     }
 
-    public String getIdentificationNumber() {
-        return identificationNumber;
-    }
-
-    public UserType getUserType() {
-        return userType;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    // Adicione métodos adicionais conforme necessário
+// Métodos getter e outros conforme necessário
 
 }
 
