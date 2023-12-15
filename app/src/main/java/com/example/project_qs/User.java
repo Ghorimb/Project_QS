@@ -3,14 +3,14 @@ public class User {
 
     private String name;
     private String identificationNumber;
-    private User user;  // Agora usa a enumeração
+    private UserType userType;  // Agora usa a enumeração
     private String username;
     private String password;
 
-    public User(String name, String identificationNumber, User user, String username, String password) {
+    public User(String name, String identificationNumber, UserType userType, String username, String password) {
         this.name = name;
         this.identificationNumber = identificationNumber;
-        this.user = user;
+        this.userType = userType;
         this.username = username;
         this.password = password;
     }
@@ -19,7 +19,10 @@ public class User {
         return password;
     }
 
-// Métodos getter e outros conforme necessário
-//Teste
+    public String getName() {
+        return name;
+    }
+
+    // Métodos getter e outros conforme necessário
 }
 

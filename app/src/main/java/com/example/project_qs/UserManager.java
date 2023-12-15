@@ -10,8 +10,8 @@ public class UserManager {
         this.users = new HashMap<>();
     }
 
-    public void createUser(String username, String password, String name, String identificationNumber, User user) {
-        User newUser = new User(name, identificationNumber, user, username, password);
+    public void createUser(String username, String password, String name, String identificationNumber, UserType userType) {
+        User newUser = new User(name, identificationNumber, userType, username, password);
         users.put(username, newUser);
     }
 

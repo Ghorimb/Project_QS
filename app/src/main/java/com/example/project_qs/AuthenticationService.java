@@ -10,8 +10,8 @@ public class AuthenticationService {
         this.registeredUsers = new HashMap<>();
     }
 
-    public void registerUser(String username, String password, String name, String identificationNumber, User user) {
-        User newUser = new User(name, identificationNumber, user, username, password);
+    public void registerUser(String username, String password, String name, String identificationNumber, UserType userType) {
+        User newUser = new User(name, identificationNumber, userType, username, password);
         registeredUsers.put(username, newUser);
     }
 

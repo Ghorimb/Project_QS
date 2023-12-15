@@ -5,4 +5,3 @@ public interface MealCanteenInterface {
 
     // Adicione métodos adicionais conforme necessário para interações específicas da cantina
 }
-
