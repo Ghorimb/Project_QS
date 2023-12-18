@@ -4,7 +4,7 @@ public class User {
 
     private String name;
     private String identificationNumber;
-    private UserType userType;  // Agora usa a enumeração
+    private UserType userType;
     private String username;
     private String password;
 
@@ -16,12 +16,14 @@ public class User {
         this.password = password;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    // Métodos getters e setters
 
     public String getName() {
         return name;
+    }
+
+    public String getIdentificationNumber() {
+        return identificationNumber;
     }
 
     public UserType getUserType() {
@@ -32,6 +34,13 @@ public class User {
         this.userType = userType;
     }
 
-    // Métodos getter e outros conforme necessário
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
+
 
