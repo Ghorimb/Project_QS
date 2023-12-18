@@ -1,4 +1,5 @@
 package com.example.project_qs;
+
 public class User {
 
     private String name;
@@ -21,6 +22,14 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     // Métodos getter e outros conforme necessário

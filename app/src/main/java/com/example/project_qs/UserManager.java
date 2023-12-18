@@ -1,4 +1,5 @@
 package com.example.project_qs;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,12 +19,16 @@ public class UserManager {
     public void createEmployeeAccess(String username) {
         User user = users.get(username);
         if (user != null) {
-            user.setUser(User.EMPLOYEE);
+            user.setUserType(UserType.EMPLOYEE);
         }
     }
 
-    // Outros métodos conforme necessário
+    public User getUserByUsername(String username) {
+        return users.get(username);
+    }
 
+    // Adicione outros métodos conforme necessário
 }
+
 
 
