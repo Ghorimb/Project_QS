@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MealReservationSystem {
 
-    private List<MealTicket> mealTickets;
+    private List <MealTicket> mealTickets;
 
     public MealReservationSystem() {
         this.mealTickets = new ArrayList<>();
