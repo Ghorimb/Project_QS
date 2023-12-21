@@ -29,23 +29,26 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Obter os valores inseridos pelo usuário
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                // Verificar as credenciais usando a classe Autenticacao
                 Utilizador utilizadorAutenticado = autenticacao.autenticarUtilizador(username, password);
 
                 if (utilizadorAutenticado != null) {
-                    // Credenciais válidas, iniciar a MainActivity
-                    // Também armazenamos o utilizador autenticado na sessão (SessionManager)
+                    Intent intent;
+                    if (utilizadorAutenticado.getTipo() == TipoUtilizador.CLIENTE) {
+                        intent = new Intent(LoginActivity.this, ClienteActivity.class);
+                    } else if (utilizadorAutenticado.getTipo() == TipoUtilizador.FUNCIONARIO) {
+                        intent = new Intent(LoginActivity.this, FuncionarioActivity.class);
+                    } else {
+                        return;
+                    }
+
                     SessionManager.setUtilizadorAutenticado(utilizadorAutenticado);
 
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
-                    finish(); // Fecha a LoginActivity para que o usuário não possa voltar a ela pressionando o botão "Voltar"
+                    finish();
                 } else {
-                    // Credenciais inválidas, exibir uma mensagem de erro
                     Toast.makeText(LoginActivity.this, "Credenciais inválidas", Toast.LENGTH_SHORT).show();
                 }
             }
