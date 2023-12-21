@@ -7,9 +7,9 @@ public class AuthenticationServiceTest {
 
     @Test
     public void testRegisterUser() {
-        AuthenticationService authService = new AuthenticationService();
+        Autenticacao authService = new Autenticacao();
 
-        authService.registerUser("john", "password", "John Doe", "123456", UserType.USER);
+        authService.registerUser("john", "password", "John Doe", "123456", TipoUtilizador.USER);
 
         // Asserts para verificar se o usuário foi registrado corretamente
         assertNotNull(authService.loginUser("john", "password"));
@@ -17,9 +17,9 @@ public class AuthenticationServiceTest {
 
     @Test
     public void testLoginUser() {
-        AuthenticationService authService = new AuthenticationService();
+        Autenticacao authService = new Autenticacao();
 
-        authService.registerUser("jane", "password123", "Jane Doe", "789012", UserType.USER);
+        authService.registerUser("jane", "password123", "Jane Doe", "789012", TipoUtilizador.USER);
 
         // Asserts para verificar se o usuário pode fazer login corretamente
         assertNotNull(authService.loginUser("jane", "password123"));

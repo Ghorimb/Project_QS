@@ -7,14 +7,14 @@ public class MealTicketTest {
 
     @Test
     public void testCreateMealTicket() {
-        User user = new User("John Doe", "123456", UserType.USER, "john", "password");
+        Utilizador utilizador = new Utilizador("John Doe", "123456", TipoUtilizador.USER, "john", "password");
         MealType mealType = new MealType("Vegetarian", "Vegetarian Meal");
         MealOrder mealOrder = new MealOrder(mealType, 2);
 
-        MealTicket mealTicket = new MealTicket(user, mealOrder);
+        MealTicket mealTicket = new MealTicket(utilizador, mealOrder);
 
         // Asserts para verificar se o ticket de refeição foi criado corretamente
-        assertEquals(user, mealTicket.getUser());
+        assertEquals(utilizador, mealTicket.getUser());
         assertEquals(mealOrder, mealTicket.getMealOrder());
         assertNotNull(mealTicket.getQrCode());
         assertNotNull(mealTicket.getReservationTime());

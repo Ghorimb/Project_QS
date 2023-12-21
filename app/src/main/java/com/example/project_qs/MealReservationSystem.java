@@ -11,9 +11,9 @@ public class MealReservationSystem {
         this.mealTickets = new ArrayList<>();
     }
 
-    public void createReservation(User user, MealOrder mealOrder) {
+    public void createReservation(Utilizador utilizador, MealOrder mealOrder) {
         // Lógica para criar uma reserva
-        MealTicket mealTicket = new MealTicket(user, mealOrder);
+        MealTicket mealTicket = new MealTicket(utilizador, mealOrder);
         mealTickets.add(mealTicket);
     }
 

@@ -3,20 +3,20 @@ import java.util.Date;
 
 public class MealTicket {
 
-    private User user;
+    private Utilizador utilizador;
     private MealOrder mealOrder;
     private String qrCode;
     private Date reservationTime;
 
-    public MealTicket(User user, MealOrder mealOrder) {
-        this.user = user;
+    public MealTicket(Utilizador utilizador, MealOrder mealOrder) {
+        this.utilizador = utilizador;
         this.mealOrder = mealOrder;
         this.qrCode = generateQRCode();
         this.reservationTime = new Date();  // Pode ser útil registrar o tempo da reserva
     }
 
-    public User getUser() {
-        return user;
+    public Utilizador getUser() {
+        return utilizador;
     }
 
     public MealOrder getMealOrder() {

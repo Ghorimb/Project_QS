@@ -7,11 +7,11 @@ public class MealReservationInterfaceTest implements MealReservationInterface {
 
     @Test
     public void testMakeReservation() {
-        User user = new User("John Doe", "123456", UserType.USER, "john", "password");
+        Utilizador utilizador = new Utilizador("John Doe", "123456", TipoUtilizador.USER, "john", "password");
         MealType mealType = new MealType("Vegetarian", "Vegetarian Meal");
         MealOrder mealOrder = new MealOrder(mealType, 2);
 
-        makeReservation(user, mealOrder);
+        makeReservation(utilizador, mealOrder);
 
         // Asserts para verificar se a reserva foi feita corretamente
         assertEquals(1, getNumberOfReservedMeals());
@@ -29,7 +29,7 @@ public class MealReservationInterfaceTest implements MealReservationInterface {
 
     // Implementação dos métodos da interface
     @Override
-    public void makeReservation(User user, MealOrder mealOrder) {
+    public void makeReservation(Utilizador utilizador, MealOrder mealOrder) {
         // Implementação da reserva
     }
 

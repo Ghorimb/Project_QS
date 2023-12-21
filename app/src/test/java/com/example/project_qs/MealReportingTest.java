@@ -1,6 +1,5 @@
 package com.example.project_qs;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +10,10 @@ public class MealReportingTest {
     public void testGenerateReport() {
         MealReporting mealReporting = new MealReporting();
 
-        User user = new User("John Doe", "123456", UserType.USER, "john", "password");
+        Utilizador utilizador = new Utilizador("John Doe", "123456", TipoUtilizador.USER, "john", "password");
         MealType mealType = new MealType("Vegetarian", "Vegetarian Meal");
         MealOrder mealOrder = new MealOrder(mealType, 2);
-        MealTicket mealTicket = new MealTicket(user, mealOrder);
+        MealTicket mealTicket = new MealTicket(utilizador, mealOrder);
 
         List<MealTicket> mealTickets = new ArrayList<>();
         mealTickets.add(mealTicket);

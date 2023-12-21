@@ -1,7 +1,7 @@
 package com.example.project_qs;
 public interface MealReservationInterface {
 
-    void makeReservation(User user, MealOrder mealOrder);
+    void makeReservation(Utilizador utilizador, MealOrder mealOrder);
 
     void updateReservation(MealTicket mealTicket, MealOrder updatedOrder);
 
