@@ -22,7 +22,7 @@ public class GestorReservas {
 
         // Permitir reservas antecipadas até às 11h
         // Você pode ajustar o horário limite conforme necessário
-        int horarioLimiteReservas = 19;
+        int horarioLimiteReservas = 11;
 
         return horaAtual < horarioLimiteReservas;
     }

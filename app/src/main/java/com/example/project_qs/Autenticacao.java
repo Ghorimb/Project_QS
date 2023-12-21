@@ -11,14 +11,14 @@ public class Autenticacao {
         registarUtilizador("João Alves", "44687", "44687", TipoUtilizador.FUNCIONARIO);
     }
 
-    public void registarUtilizador(String nome, String numeroIdentificacao, String senha, TipoUtilizador tipo) {
-        Utilizador utilizador = new Utilizador(nome, numeroIdentificacao, senha, tipo);
+    public void registarUtilizador(String nome, String numeroIdentificacao, String password, TipoUtilizador tipoUtilizador) {
+        Utilizador utilizador = new Utilizador(nome, numeroIdentificacao, password, tipoUtilizador);
         utilizadores.add(utilizador);
     }
 
-    public Utilizador autenticarUtilizador(String numeroIdentificacao, String senha) {
+    public Utilizador autenticarUtilizador(String numeroIdentificacao, String password) {
         for (Utilizador utilizador : utilizadores) {
-            if (utilizador.getNumeroIdentificacao().equals(numeroIdentificacao) && utilizador.getSenha().equals(senha)) {
+            if (utilizador.getNumeroIdentificacao().equals(numeroIdentificacao) && utilizador.getPassword().equals(password)) {
                 return utilizador;
             }
         }

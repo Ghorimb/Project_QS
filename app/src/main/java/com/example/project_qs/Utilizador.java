@@ -3,13 +3,13 @@ package com.example.project_qs;
 public class Utilizador {
     private String nome;
     private String numeroIdentificacao;
-    private String senha;
+    private String password;
     private TipoUtilizador tipoUtilizador;
 
-    public Utilizador(String nome, String numeroIdentificacao, String senha, TipoUtilizador tipoUtilizador) {
+    public Utilizador(String nome, String numeroIdentificacao, String password, TipoUtilizador tipoUtilizador) {
         this.nome = nome;
         this.numeroIdentificacao = numeroIdentificacao;
-        this.senha = senha;
+        this.password = password;
         this.tipoUtilizador = tipoUtilizador;
     }
 
@@ -29,12 +29,12 @@ public class Utilizador {
         this.numeroIdentificacao = numeroIdentificacao;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public TipoUtilizador getTipoUtilizador() {
