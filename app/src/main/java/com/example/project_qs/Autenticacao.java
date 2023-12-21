@@ -24,6 +24,12 @@ public class Autenticacao {
         }
         return null;
     }
+
+    public static Utilizador autenticarUtilizadorAtual() {
+        // Lógica para obter o utilizador autenticado atualmente (pode variar dependendo da implementação)
+        // Neste exemplo, supomos que o utilizador autenticado é mantido por meio de um controle de sessão (SessionManager)
+        return SessionManager.getUtilizadorAutenticado();
+    }
 }
 
 

@@ -16,8 +16,8 @@ public class ClienteActivity extends AppCompatActivity {
 
         textViewWelcome = findViewById(R.id.textViewWelcome);
 
-        // Obter informações do usuário autenticado (você pode usar dados mais significativos)
-        Utilizador utilizador = Autenticacao.obterUtilizadorAutenticado(); // Supondo que você tenha um método assim
+        // Obter informações do utilizador autenticado
+        Utilizador utilizador = Autenticacao.autenticarUtilizadorAtual();
 
         if (utilizador != null) {
             String mensagemBoasVindas = "Bem-vindo, " + utilizador.getNome() + "!";
