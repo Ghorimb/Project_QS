@@ -7,18 +7,18 @@ public class Autenticacao {
     public Autenticacao() {
         this.utilizadores = new ArrayList<>();
         // Adicione alguns utilizadores de exemplo (substitua com a lógica real)
-        registarUtilizador("admin1", "admin1", TipoUtilizador.CLIENTE);
-        registarUtilizador("admin2", "admin2", TipoUtilizador.FUNCIONARIO);
+        registarUtilizador("Maria Pacheco", "41807", "41807", TipoUtilizador.CLIENTE);
+        registarUtilizador("João Alves", "44687", "44687", TipoUtilizador.FUNCIONARIO);
     }
 
-    public void registarUtilizador(String nome, String numeroIdentificacao, TipoUtilizador tipo) {
-        Utilizador utilizador = new Utilizador(nome, numeroIdentificacao, tipo);
+    public void registarUtilizador(String nome, String numeroIdentificacao, String senha, TipoUtilizador tipo) {
+        Utilizador utilizador = new Utilizador(nome, numeroIdentificacao, senha, tipo);
         utilizadores.add(utilizador);
     }
 
-    public Utilizador autenticarUtilizador(String nome, String numeroIdentificacao) {
+    public Utilizador autenticarUtilizador(String numeroIdentificacao, String senha) {
         for (Utilizador utilizador : utilizadores) {
-            if (utilizador.getNome().equals(nome) && utilizador.getNumeroIdentificacao().equals(numeroIdentificacao)) {
+            if (utilizador.getNumeroIdentificacao().equals(numeroIdentificacao) && utilizador.getSenha().equals(senha)) {
                 return utilizador;
             }
         }
@@ -31,5 +31,3 @@ public class Autenticacao {
         return SessionManager.getUtilizadorAutenticado();
     }
 }
-
-

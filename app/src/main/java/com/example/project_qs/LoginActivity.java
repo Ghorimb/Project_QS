@@ -36,9 +36,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (utilizadorAutenticado != null) {
                     Intent intent;
-                    if (utilizadorAutenticado.getTipo() == TipoUtilizador.CLIENTE) {
+                    if (utilizadorAutenticado.getTipoUtilizador() == TipoUtilizador.CLIENTE) {
                         intent = new Intent(LoginActivity.this, ClienteActivity.class);
-                    } else if (utilizadorAutenticado.getTipo() == TipoUtilizador.FUNCIONARIO) {
+                    } else if (utilizadorAutenticado.getTipoUtilizador() == TipoUtilizador.FUNCIONARIO) {
                         intent = new Intent(LoginActivity.this, FuncionarioActivity.class);
                     } else {
                         return;
