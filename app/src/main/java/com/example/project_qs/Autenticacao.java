@@ -9,6 +9,7 @@ public class Autenticacao {
         // Adicione alguns utilizadores de exemplo (substitua com a lógica real)
         registarUtilizador("Maria Pacheco", "41807", "41807", TipoUtilizador.CLIENTE);
         registarUtilizador("Tiago Sá", "41367", "41367", TipoUtilizador.CLIENTE);
+        registarUtilizador("Bruno Amorim", "44098", "44098", TipoUtilizador.CLIENTE);
         registarUtilizador("João Alves", "44687", "44687", TipoUtilizador.FUNCIONARIO);
     }
 

@@ -23,7 +23,6 @@ public class ClienteActivity extends AppCompatActivity {
     private Button buttonLogout;
     private TextView textViewMensagem;
     private Utilizador utilizador;
-    private ImageView imageViewQrCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,11 +98,6 @@ public class ClienteActivity extends AppCompatActivity {
                 finish(); // Fecha a ClienteActivity para que o utilizador não possa voltar a ela pressionando o botão "Voltar"
             }
         });
-
-        imageViewQrCode = findViewById(R.id.imageViewQrCode);
-
-        // Exemplo de chamada para gerar um código QR com dados "Exemplo"
-        generateQrCode("Exemplo");
     }
 
     // Método para atualizar o spinner de modalidades com base no tipo de refeição selecionado
@@ -129,36 +123,4 @@ public class ClienteActivity extends AppCompatActivity {
         modalidadesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerModalidades.setAdapter(modalidadesAdapter);
     }
-
-    private void generateQrCode(String data) {
-        int size = 512;
-
-        // Configurar o bitmap para o código QR
-        Bitmap bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-        int[] pixels = new int[size * size];
-
-        // Configurar cor branca para todos os pixels
-        for (int i = 0; i < pixels.length; i++) {
-            pixels[i] = Color.WHITE;
-        }
-
-        // Configurar cor preta para os módulos escuros com base nos dados
-        byte[] dataBytes = data.getBytes();
-        int index = 0;
-
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                // Modificar a lógica para considerar os dados do código QR
-                if (index < dataBytes.length) {
-                    int pixelValue = (dataBytes[index] >> 7 - j % 8) & 1;
-                    pixels[i * size + j] = (pixelValue == 1) ? Color.BLACK : Color.WHITE;
-                    index += (j % 8 == 7) ? 1 : 0;
-                }
-            }
-        }
-
-        bitmap.setPixels(pixels, 0, size, 0, 0, size, size);
-        imageViewQrCode.setImageBitmap(bitmap);
-    }
-
 }

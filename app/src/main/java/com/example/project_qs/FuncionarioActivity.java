@@ -15,6 +15,7 @@ public class FuncionarioActivity extends AppCompatActivity {
     private Button buttonLogout;
     private String tipoRefeicaoSelecionado;
     private String modalidadeSelecionada;
+    private TextView textViewContadorReservas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class FuncionarioActivity extends AppCompatActivity {
         spinnerTiposRefeicao = findViewById(R.id.spinnerTiposRefeicao);
         spinnerModalidades = findViewById(R.id.spinnerModalidades);
         buttonLogout = findViewById(R.id.buttonLogout);
+        textViewContadorReservas = findViewById(R.id.textViewContadorReservas);
 
         // Configurar adaptadores para os spinners
         ArrayAdapter<CharSequence> tiposRefeicaoAdapter = ArrayAdapter.createFromResource(
@@ -81,6 +83,8 @@ public class FuncionarioActivity extends AppCompatActivity {
                 finish(); // Fecha a FuncionarioActivity para que o utilizador não possa voltar a ela pressionando o botão "Voltar"
             }
         });
+
+        atualizarContadorReservas();
     }
 
     private void atualizarInformacoes() {
@@ -89,5 +93,11 @@ public class FuncionarioActivity extends AppCompatActivity {
 
         // Atualizar o TextView com as informações
         textViewInfo.setText(informacoes);
+    }
+
+    private void atualizarContadorReservas() {
+        int contador = GestorReservas.getContadorRefeicoesReservadas();
+        String textoContador = "Contador de Reservas: " + contador;
+        textViewContadorReservas.setText(textoContador);
     }
 }

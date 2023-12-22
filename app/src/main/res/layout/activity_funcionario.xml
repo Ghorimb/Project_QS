@@ -31,12 +31,21 @@
         android:layout_centerHorizontal="true"
         android:entries="@array/modalidades" />
 
+    <TextView
+        android:id="@+id/textViewContadorReservas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerModalidades"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
     <Button
-            android:id="@+id/buttonLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/spinnerModalidades"
-            android:layout_marginTop="52dp"
-            android:text="Logout" android:layout_alignParentEnd="true" android:layout_marginEnd="158dp"
-            android:layout_centerHorizontal="true"/>
+         android:id="@+id/buttonLogout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/textViewContadorReservas"
+         android:layout_marginTop="52dp"
+         android:text="Logout" android:layout_alignParentEnd="true" android:layout_marginEnd="158dp"
+         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

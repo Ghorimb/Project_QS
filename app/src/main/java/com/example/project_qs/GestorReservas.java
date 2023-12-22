@@ -8,6 +8,7 @@ import java.util.Map;
 public class GestorReservas {
 
     private static Map<String, Map<String, List<Reserva>>> reservasPorTipoEModalidade = new HashMap<>();
+    private static int contadorRefeicoesReservadas = 0;
 
     public static void adicionarReserva(Reserva reserva) {
         // Obter o tipo de refeição e a modalidade da reserva
@@ -31,6 +32,9 @@ public class GestorReservas {
 
         // Adicionar a reserva à lista correspondente à modalidade
         reservasPorModalidade.get(modalidade).add(reserva);
+
+        // Atualizar o contador de refeições reservadas
+        contadorRefeicoesReservadas++;
     }
 
     public static String obterDetalhesReservasPorTipoEModalidade(String tipoRefeicao, String modalidade) {
@@ -60,6 +64,7 @@ public class GestorReservas {
         return "Não há reservas para o tipo de refeição e modalidade selecionados.";
     }
 
-    // Outros métodos, se necessário
+    public static int getContadorRefeicoesReservadas() {
+        return contadorRefeicoesReservadas;
+    }
 }
-
