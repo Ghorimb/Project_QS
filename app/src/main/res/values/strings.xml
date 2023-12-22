@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Project_QS</string>
+
+    <string name="selecione_tipo_refeicao">Selecione o Tipo de Refeição</string>
+    <string name="selecione_modalidade">Selecione a Modalidade</string>
+    <!-- Tipos de Refeição -->
+    <string-array name="tipos_refeicao_array">
+        <item>Prato peixe</item>
+        <item>Prato carne</item>
+        <item>Vegetariano</item>
+    </string-array>
+
+    <!-- Modalidades para Prato peixe -->
+    <string-array name="modalidades_prato_peixe_array">
+        <item>Apenas o prato</item>
+        <item>Sopa + prato</item>
+        <item>Sopa + prato + sobremesa</item>
+    </string-array>
+
+    <!-- Modalidades para Prato carne -->
+    <string-array name="modalidades_prato_carne_array">
+        <item>Apenas o prato</item>
+        <item>Sopa + prato</item>
+        <item>Sopa + prato + sobremesa</item>
+    </string-array>
+
+    <!-- Modalidades para Vegetariano -->
+    <string-array name="modalidades_vegetariano_array">
+        <item>Apenas o prato</item>
+        <item>Sopa + prato</item>
+        <item>Sopa + prato + sobremesa</item>
+    </string-array>
 </resources>

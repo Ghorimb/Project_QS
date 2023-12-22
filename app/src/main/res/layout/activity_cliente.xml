@@ -33,6 +33,26 @@
         android:textSize="18sp"
         android:textColor="#000000" />
 
+    <!-- Spinner para tipos de refeição -->
+    <Spinner
+     android:id="@+id/spinnerTiposRefeicao"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/textViewMensagem"
+     android:layout_marginTop="16dp"
+     android:layout_centerHorizontal="true"
+     android:prompt="@string/selecione_tipo_refeicao" />
+
+    <!-- Spinner para modalidades -->
+    <Spinner
+    android:id="@+id/spinnerModalidades"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/spinnerTiposRefeicao"
+    android:layout_marginTop="16dp"
+    android:layout_centerHorizontal="true"
+    android:prompt="@string/selecione_modalidade" />
+
 </RelativeLayout>
 
 
