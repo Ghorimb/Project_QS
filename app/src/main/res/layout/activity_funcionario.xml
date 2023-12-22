@@ -6,17 +6,38 @@
     tools:context=".FuncionarioActivity">
 
     <TextView
-        android:id="@+id/textViewInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Informações do Funcionário" />
+            android:id="@+id/textViewInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalhes das Reservas por Modalidade"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
+
+    <Spinner
+            android:id="@+id/spinnerModalidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewInfo"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:entries="@array/modalidades" />
+
+    <Button
+            android:id="@+id/buttonVisualizarReservas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visualizar Reservas"
+            android:layout_below="@id/spinnerModalidades"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/buttonLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewInfo"
+        android:layout_below="@+id/buttonVisualizarReservas"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Logout" />

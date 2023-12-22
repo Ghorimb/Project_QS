@@ -1,43 +1,63 @@
 package com.example.project_qs;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FuncionarioActivity extends AppCompatActivity {
 
     private TextView textViewInfo;
-    private Button buttonLogout;
+    private Spinner spinnerModalidades;
+    private String modalidadeSelecionada;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_funcionario);
 
         textViewInfo = findViewById(R.id.textViewInfo);
-        buttonLogout = findViewById(R.id.buttonLogout);
+        spinnerModalidades = findViewById(R.id.spinnerModalidades);
 
-        // Exemplo de como um funcionário pode visualizar informações
-        int totalRefeicoesReservadas = GestorReservas.obterTotalRefeicoesReservadas(); // Supondo que você tenha um método assim
+        // Configurar o Spinner com as modalidades disponíveis
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.modalidades,
+                android.R.layout.simple_spinner_item
+        );
 
-        String mensagemInfo = "Total de refeições reservadas: " + totalRefeicoesReservadas;
-        textViewInfo.setText(mensagemInfo);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerModalidades.setAdapter(adapter);
 
-        buttonLogout.setOnClickListener(new View.OnClickListener() {
+        // Lidar com a seleção do Spinner
+        spinnerModalidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                // Implementar a lógica de logout aqui, por exemplo, limpar a sessão, redefinir dados, etc.
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // Atualizar a modalidade selecionada
+                modalidadeSelecionada = parentView.getItemAtPosition(position).toString();
 
-                // Voltar para a LoginActivity
-                Intent intent = new Intent(FuncionarioActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish(); // Fecha a FuncionarioActivity para que o utilizador não possa voltar a ela pressionando o botão "Voltar"
+                // Atualizar as informações com base na modalidade selecionada
+                atualizarInformacoes();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // Fazer algo se nada estiver selecionado (opcional)
             }
         });
+    }
+
+    private void atualizarInformacoes() {
+        // Obter informações sobre as reservas com base no tipo de refeição e modalidade selecionados
+        String tipoRefeicao = "Prato"; // Substitua pela lógica necessária para obter o tipo de refeição desejado
+        String informacoes = GestorReservas.obterDetalhesReservasPorTipoEModalidade(tipoRefeicao, modalidadeSelecionada);
+
+        // Atualizar o TextView com as informações
+        textViewInfo.setText(informacoes);
     }
 }
 

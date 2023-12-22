@@ -30,4 +30,10 @@
         <item>Sopa + prato</item>
         <item>Sopa + prato + sobremesa</item>
     </string-array>
+
+    <string-array name="modalidades">
+        <item>Apenas o prato</item>
+        <item>Sopa + prato</item>
+        <item>Sopa + prato + sobremesa</item>
+    </string-array>
 </resources>
