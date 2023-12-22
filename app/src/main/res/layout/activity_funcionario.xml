@@ -12,8 +12,7 @@
         android:layout_centerHorizontal="true"
         android:text="Informações sobre reservas"
         android:textSize="18sp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold" android:layout_alignParentTop="true" android:layout_marginTop="43dp"/>
     <Spinner
         android:id="@+id/spinnerTiposRefeicao"
         android:layout_width="match_parent"
@@ -38,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerModalidades"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Logout" />
+        android:layout_marginTop="350dp"
+        android:text="Logout"/>
 </RelativeLayout>

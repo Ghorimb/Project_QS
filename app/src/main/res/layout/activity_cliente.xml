@@ -5,29 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".ClienteActivity">
 
-    <!-- Seus outros elementos de layout aqui -->
-
     <Button
         android:id="@+id/buttonReservar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reservar"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="16dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="69dp"/>
 
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:layout_below="@id/buttonReservar"
-        android:layout_marginTop="16dp" />
 
-     <ImageView
+    <ImageView
         android:id="@+id/imageViewQrCode"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_below="@+id/buttonLogout"
+        android:layout_below="@+id/buttonReservar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:scaleType="centerInside"
@@ -43,25 +35,31 @@
         android:textSize="18sp"
         android:textColor="#000000" />
 
-    <!-- Spinner para tipos de refeição -->
     <Spinner
-     android:id="@+id/spinnerTiposRefeicao"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_below="@id/textViewMensagem"
-     android:layout_marginTop="16dp"
-     android:layout_centerHorizontal="true"
-     android:prompt="@string/selecione_tipo_refeicao" />
+        android:id="@+id/spinnerTiposRefeicao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMensagem"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:prompt="@string/selecione_tipo_refeicao" />
 
-    <!-- Spinner para modalidades -->
     <Spinner
-    android:id="@+id/spinnerModalidades"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/spinnerTiposRefeicao"
-    android:layout_marginTop="16dp"
-    android:layout_centerHorizontal="true"
-    android:prompt="@string/selecione_modalidade" />
+       android:id="@+id/spinnerModalidades"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/spinnerTiposRefeicao"
+       android:layout_marginTop="16dp"
+       android:layout_centerHorizontal="true"
+       android:prompt="@string/selecione_modalidade" />
+
+    <Button
+       android:id="@+id/buttonLogout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Logout"
+       android:layout_below="@id/spinnerModalidades" android:layout_alignParentStart="true"
+       android:layout_marginTop="166dp" android:layout_marginStart="160dp" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
 
