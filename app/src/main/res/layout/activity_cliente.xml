@@ -16,14 +16,14 @@
 
 
     <ImageView
-        android:id="@+id/imageViewQrCode"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/buttonReservar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_launcher_foreground" />
+            android:id="@+id/imageViewQrCode"
+            android:layout_width="141dp"
+            android:layout_height="147dp"
+            android:layout_below="@+id/buttonReservar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher_foreground"/>
 
     <TextView
         android:id="@+id/textViewMensagem"
@@ -54,12 +54,12 @@
        android:prompt="@string/selecione_modalidade" />
 
     <Button
-       android:id="@+id/buttonLogout"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Logout"
-       android:layout_below="@id/spinnerModalidades" android:layout_alignParentStart="true"
-       android:layout_marginTop="166dp" android:layout_marginStart="160dp" android:layout_centerHorizontal="true"/>
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_below="@id/spinnerModalidades" android:layout_alignParentStart="true"
+            android:layout_marginTop="31dp" android:layout_marginStart="159dp" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
 
