@@ -14,7 +14,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editTextUsername, editTextPassword;
     private Button buttonLogin;
 
-    // Utilizando a mesma instância de Autenticacao em toda a aplicação
     private static Autenticacao autenticacao = new Autenticacao();
 
     @Override

@@ -12,7 +12,6 @@ public class RefeicaoTest {
 
     @Before
     public void setUp() {
-        // Crie uma lista de modalidades de exemplo para testar
         modalidades = new ArrayList<>();
         modalidades.add("Opção 1");
         modalidades.add("Opção 2");

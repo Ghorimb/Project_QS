@@ -6,7 +6,6 @@ public class Autenticacao {
 
     public Autenticacao() {
         this.utilizadores = new ArrayList<>();
-        // Adicione alguns utilizadores de exemplo (substitua com a lógica real)
         registarUtilizador("Maria Pacheco", "41807", "41807", TipoUtilizador.CLIENTE);
         registarUtilizador("Tiago Sá", "41367", "41367", TipoUtilizador.CLIENTE);
         registarUtilizador("Bruno Amorim", "44098", "44098", TipoUtilizador.CLIENTE);
@@ -28,8 +27,6 @@ public class Autenticacao {
     }
 
     public static Utilizador autenticarUtilizadorAtual() {
-        // Lógica para obter o utilizador autenticado atualmente (pode variar dependendo da implementação)
-        // Neste exemplo, supomos que o utilizador autenticado é mantido por meio de um controle de sessão (SessionManager)
         return SessionManager.getUtilizadorAutenticado();
     }
 }

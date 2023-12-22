@@ -3,7 +3,7 @@ package com.example.project_qs;
 import java.util.ArrayList;
 
 public class Refeicao {
-    private String tipo; // Tipo de refeição: "Prato peixe", "Prato carne", "Vegetariano"
+    private String tipo;
     private ArrayList<String> modalidades;
 
     public Refeicao(String tipo, ArrayList<String> modalidades) {

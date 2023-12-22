@@ -11,7 +11,6 @@ public class UtilizadorTest {
 
     @Before
     public void setUp() {
-        // Crie um Utilizador de exemplo para testar
         utilizador = new Utilizador("João", "123456", "senha123", TipoUtilizador.FUNCIONARIO);
     }
 
