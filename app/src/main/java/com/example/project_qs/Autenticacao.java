@@ -8,6 +8,7 @@ public class Autenticacao {
         this.utilizadores = new ArrayList<>();
         // Adicione alguns utilizadores de exemplo (substitua com a lógica real)
         registarUtilizador("Maria Pacheco", "41807", "41807", TipoUtilizador.CLIENTE);
+        registarUtilizador("Tiago Sá", "41367", "41367", TipoUtilizador.CLIENTE);
         registarUtilizador("João Alves", "44687", "44687", TipoUtilizador.FUNCIONARIO);
     }
 

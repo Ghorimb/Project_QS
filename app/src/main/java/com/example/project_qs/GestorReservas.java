@@ -47,7 +47,7 @@ public class GestorReservas {
                 // Construir uma string com os detalhes das reservas
                 StringBuilder detalhes = new StringBuilder();
                 for (Reserva reserva : reservas) {
-                    detalhes.append("Usuário: ").append(reserva.getUtilizador().getNome()).append("\n");
+                    detalhes.append("Utilizador: ").append(reserva.getUtilizador().getNome()).append("\n");
                     detalhes.append("Data da Reserva: ").append(reserva.getDataReserva()).append("\n");
                     detalhes.append("Tipo de Refeição: ").append(reserva.getRefeicao().getTipo()).append("\n");
                     detalhes.append("Modalidade: ").append(reserva.getRefeicao().getModalidades().get(0)).append("\n\n");
