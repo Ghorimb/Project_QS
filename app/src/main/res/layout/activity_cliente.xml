@@ -23,6 +23,17 @@
         android:layout_below="@id/buttonReservar"
         android:layout_marginTop="16dp" />
 
+    <TextView
+        android:id="@+id/textViewMensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLogout"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
 </RelativeLayout>
+
 
 

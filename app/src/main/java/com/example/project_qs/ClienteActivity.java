@@ -16,6 +16,7 @@ public class ClienteActivity extends AppCompatActivity {
 
     private Button buttonReservar;
     private Button buttonLogout;
+    private TextView textViewMensagem;
     private Utilizador utilizador;
 
     @Override
@@ -23,11 +24,12 @@ public class ClienteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
 
-        // Obter informações do utilizador autenticado (você pode usar dados mais significativos)
+        // Obter informações do utilizador autenticado
         utilizador = Autenticacao.autenticarUtilizadorAtual();
 
         buttonReservar = findViewById(R.id.buttonReservar);
         buttonLogout = findViewById(R.id.buttonLogout);
+        textViewMensagem = findViewById(R.id.textViewMensagem);
 
         buttonReservar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,9 +49,11 @@ public class ClienteActivity extends AppCompatActivity {
                             "Tipo de Refeição: " + reserva.getRefeicao().getTipo() + "\n" +
                             "Modalidades: " + reserva.getRefeicao().getModalidades();
 
-                    Toast.makeText(ClienteActivity.this, mensagem, Toast.LENGTH_LONG).show();
+                    // Atualizar a TextView com a mensagem
+                    textViewMensagem.setText(mensagem);
                 } else {
-                    Toast.makeText(ClienteActivity.this, "Não é possível reservar antecipadamente neste momento.", Toast.LENGTH_SHORT).show();
+                    // Atualizar a TextView com a mensagem
+                    textViewMensagem.setText("Não é possível reservar antecipadamente neste momento.");
                 }
             }
         });
@@ -67,3 +71,4 @@ public class ClienteActivity extends AppCompatActivity {
         });
     }
 }
+
