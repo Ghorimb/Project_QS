@@ -33,21 +33,11 @@
         android:layout_centerHorizontal="true"
         android:prompt="@string/selecione_tipo_refeicao" />
 
-    <ImageView
-       android:id="@+id/imageViewTipoRefeicao"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_below="@+id/spinnerTiposRefeicao"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="16dp"
-       android:layout_marginBottom="16dp"
-       android:contentDescription="@string/tipo_refeicao_image" />
-
     <Spinner
        android:id="@+id/spinnerModalidades"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_below="@id/imageViewTipoRefeicao"
+       android:layout_below="@id/spinnerTiposRefeicao"
        android:layout_marginTop="16dp"
        android:layout_centerHorizontal="true"
        android:prompt="@string/selecione_modalidade" />
