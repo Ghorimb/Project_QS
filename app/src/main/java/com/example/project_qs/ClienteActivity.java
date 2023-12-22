@@ -1,5 +1,6 @@
 package com.example.project_qs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ClienteActivity extends AppCompatActivity {
+
     private Button buttonReservar;
+    private Button buttonLogout;
     private Utilizador utilizador;
 
     @Override
@@ -20,7 +23,11 @@ public class ClienteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
 
+        // Obter informações do utilizador autenticado (você pode usar dados mais significativos)
+        utilizador = Autenticacao.autenticarUtilizadorAtual();
+
         buttonReservar = findViewById(R.id.buttonReservar);
+        buttonLogout = findViewById(R.id.buttonLogout);
 
         buttonReservar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +51,18 @@ public class ClienteActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(ClienteActivity.this, "Não é possível reservar antecipadamente neste momento.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Implementar a lógica de logout aqui, por exemplo, limpar a sessão, redefinir dados, etc.
+
+                // Voltar para a LoginActivity
+                Intent intent = new Intent(ClienteActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Fecha a ClienteActivity para que o utilizador não possa voltar a ela pressionando o botão "Voltar"
             }
         });
     }

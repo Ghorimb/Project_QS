@@ -1,25 +1,28 @@
-<!-- activity_cliente.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".ClienteActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClienteActivity">
 
-    <TextView
-            android:id="@+id/textViewWelcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bem-vindo!"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"/>
+    <!-- Seus outros elementos de layout aqui -->
 
     <Button
-            android:id="@+id/buttonReservar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reservar Refeição"
-            android:layout_below="@id/textViewWelcome"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+        android:id="@+id/buttonReservar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_below="@id/buttonReservar"
+        android:layout_marginTop="16dp" />
+
 </RelativeLayout>
+
 
