@@ -10,9 +10,7 @@ import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.EnumMap;
+import java.util.*;
 
 public class ClienteActivity extends AppCompatActivity {
 

@@ -45,4 +45,3 @@ public class Utilizador {
         this.tipoUtilizador = tipoUtilizador;
     }
 }
-
